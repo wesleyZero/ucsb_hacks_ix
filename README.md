@@ -16,7 +16,7 @@
 
 ## Description 👩‍🎓
 
-Cheat Checker is a web-based application that uses computer vision to process the submitted videos from the student during the test-taking. Python model is trained to detect when the student is not looking at the screen and when their gaze is not stable. Our machine learning model detects when student is not looking at the screen, absent, and puts out the timestamps for that activities. Teachers can see for themselves the video and check with the provided data to make a fair judgement. 
+Cheat Checker is a web-based application that uses computer vision to process the submitted videos from the student during the test-taking. Python model is trained to detect when the student is not looking at the screen and when their gaze is not stable. Our machine learning model detects when student is not looking at the screen, absent, and puts out the timestamps for that activities. Teachers can see for themselves the video and check with the provided data to make a fair judgment. 
 
 
 ### Technologies 🚀
