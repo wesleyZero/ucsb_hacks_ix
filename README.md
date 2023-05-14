@@ -1,7 +1,7 @@
 ![Cheat Checker](https://github.com/wesleyZero/ucsb_hacks_ix/assets/86029622/3676487c-937b-42a0-bb50-ef11f2efc0a3)
 
 
-> We believe that the pursuit of knowledge is a valuable and important aspect of education, and it should be carried out with integrity and honesty. Cheating not only undermines the learning process but also diminishes the value of hard work and effort put in by those who strive for academic excellence. We wanted to use new AI capabilities to help the teachers and students themselves. 
+> We believe that the pursuit of knowledge is a valuable and important aspect of education, and it should be carried out with integrity and honesty. Cheating not only undermines the learning process but also diminishes the value of hard work and effort put in by those who strive for academic excellence. We wanted to use new AI capabilities to help the teachers grade work more objectively. 
 
 
 ### Table of Contents
@@ -24,7 +24,7 @@ Cheat Checker is a web-based application that uses computer vision to process th
 
 
 ### How to use
-- You will upload the video to the wepage and then it will give back your percantage of screen attention. The lower the percentage the more are the chances that the user was cheating. 
+- You will upload the video to the wepage and then it will give back your percantage of screen attention. The lower the percentage the more are the chances that the user is cheating. 
 
 
 ---
