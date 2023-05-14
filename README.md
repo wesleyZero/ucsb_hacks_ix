@@ -4,7 +4,7 @@
 > We believe that the pursuit of knowledge is a valuable and important aspect of education, and it should be carried out with integrity and honesty. Cheating not only undermines the learning process but also diminishes the value of hard work and effort put in by those who strive for academic excellence. We wanted to use new AI capabilities to help the teachers grade work more objectively. 
 
 
-> Our new domain is: ## cheatchecker.tech 🌱
+> Our new domain is: cheatchecker.tech 🌱
 ### Table of Contents
 
 - [Description](#description)
