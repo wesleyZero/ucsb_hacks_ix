@@ -19,6 +19,8 @@ Cheat Checker is a web-based application that uses computer vision to process th
 
 
 ### Technologies
+![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)
+
 
 - Modified pretrained eye tracking model (Python 2, 3 library), Pytorch, Django framework to connect back-end and front-end, HTML/CSS to write the front-end, Figma and Canva for designing. 
 
