@@ -12,6 +12,7 @@ webcam = cv2.VideoCapture('video/eye_track_test_video.mp4')
 total_frames = 0
 fps = webcam.get(cv2.CAP_PROP_FPS)
 eye_detected_ratio = 0 #this is the % of the time eyes are detected
+# test comment 
 
 while True:
     # We get a new frame from the webcam
