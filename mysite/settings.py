@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+GOOGLE_OAUTH2_CLIENT_ID = '560902012858-qpapqh2n1ignd5kk4sh82ih06e1qb87g.apps.googleusercontent.com'
+GOOGLE_OAUTH2_CLIENT_SECRET = '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'
 
 # Application definition
 
@@ -119,10 +121,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
