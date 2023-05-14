@@ -21,7 +21,6 @@
         <form enctype="multipart/form-data" method="POST" action="">
             {% csrf_token %}
             {{ form.as_p }}
-
             <input type="submit" value="Upload" />
         </form>
         <br><br>
@@ -29,6 +28,10 @@
             <source src='{{ MEDIA_URL }}{{ videofile }}' type='video/mp4'>
             Your browser does not support the video tag.
         </video>
+        <p> Suspicious flagged moments:</p>
+        {% for key, value in duration.items %}
+        <p>Spent {{value}} seconds off screen at time {{key}}</p>
+        {% endfor %}
         <br><br>
         </p>
     </div>
