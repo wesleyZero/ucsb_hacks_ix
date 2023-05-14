@@ -9,36 +9,36 @@
 - [Description](#description)
 - [How To Use](#how-to-use)
 - [References](#references)
-- [Authors Info](#authors-info)
+- [Authors Info](#hackers-info)
 
 ---
 
 ## Description
 
-We used computer vision to process the video submitted by the students during the test. It calculates the score....
+Cheat Checker is a web-based application that uses computer vision to process the submitted videos from the student during the test-taking. Python model is trained to detect when the student is not looking at the screen and when their gaze is not stable. The less attention they give to their screen, the less percentage they will have. 
 
 
-#### Technologies
+### Technologies
 
-- Python, Django framework, HTML/CSS.
+- Python 2 and 3 libraries, Pytorch, Django framework, HTML/CSS, Figma, Canva. 
 
-[Back To The Top](#read-me-template)
+
+### How to use
+- You will upload the video to the wepage and then it will give back your percantage of screen attention. The lower the percentage the more are the chances that the user was cheating. 
+
 
 ---
 
-#### Installation
-- 
+### References
+- Gaze Tracker, Python libraries - https://github.com/antoinelame/GazeTracking
+- Deep learning project -  https://github.com/natanielruiz/deep-head-pose
 
 
+## Hackers Info
+- Wesley Johanson \\ https://www.linkedin.com/in/wesleyzero/
+- Aiturgan Talant \\ https://www.linkedin.com/in/aiturgan-talant-8aa003250/
 
-## References
-
-
-[Back To The Top](#read-me-template)
 
 ---
 
-## Authors Info
-- 
-[Back To The Top](#read-me-template)
-
+![Cheat Checker](https://github.com/wesleyZero/ucsb_hacks_ix/assets/86029622/cd378a2e-999c-479b-bcb7-db71140d01e4)
