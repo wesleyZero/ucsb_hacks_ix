@@ -17,12 +17,20 @@ class Eye_duration():
         total_frames = 0
         fps = video.get(cv2.CAP_PROP_FPS)
         eye_detected_ratio = 0  # this is the % of the time eyes are detected
+
         # test comment
 
         no_eye_times = []           # these are the times where no eyes are detected
         no_eye_duration = 1
         last_eye_detection_state = None
         durations = {}
+
+        off_screen_times = []
+        on_screen_dectected = 1
+        off_screen_duration = 1
+        on_screen_dectected_ratio = 0
+        last_on_screen_detection_state = None
+        duration1 = {}
 
         while True:
             # We get a new frame from the video
@@ -57,9 +65,20 @@ class Eye_duration():
             else:
                 print(f"frame # = {total_frames} no eyes {no_eye_duration}")
 
+            if gaze.horizontal_ratio() < 0.2 or gaze.horizontal_ratio() > 0.8:
+                print("_")
+            else:
+                print(
+                    f"frame # = {total_frames} eyes off screen {off_screen_duration}")
+
             eyes_detected = 1 if left_pupil else 0
             eye_detected_ratio = (eye_detected_ratio * total_frames +
                                   eyes_detected) / (total_frames + 1)
+
+            on_screen_dectected = 1 if gaze.horizontal_ratio(
+            ) > 0.2 and gaze.horizontal_ratio() < 0.8 else 0
+            on_screen_dectected_ratio = (
+                on_screen_dectected_ratio * total_frames + on_screen_dectected) / (total_frames + 1)
 
             # if not eyes_detected and eyes_detected != last_eye_detection_state:
             # 	no_eye_duration += 1
@@ -85,9 +104,23 @@ class Eye_duration():
             # else:
                 # no_eye_duration = 1
 
+            if not on_screen_dectected and last_on_screen_detection_state == 1:
+                off_screen_times.append(total_frames/30)
+                off_screen_duration += 1
+            elif not on_screen_dectected and last_on_screen_detection_state == 0:
+                off_screen_duration += 1
+            elif on_screen_dectected and last_on_screen_detection_state == 0:
+                if len(off_screen_times):
+                    if (no_eye_duration - 1)/30 > 2:
+                        duration1[off_screen_times[-1]
+                                            ] = (off_screen_duration - 1)/30
+                off_screen_duration = 1
+
             total_frames += 1
 
             last_eye_detection_state = eyes_detected
+
+            last_on_screen_detection_state = on_screen_dectected
 
             cv2.putText(frame, "Left pupil:  " + str(left_pupil), (90, 130),
                         cv2.FONT_HERSHEY_DUPLEX, 0.9, (147, 58, 31), 1)
@@ -100,12 +133,16 @@ class Eye_duration():
             cv2.putText(frame, f"% eye detect {eye_detected_ratio}",
                         (90, 260), cv2.FONT_HERSHEY_DUPLEX, 0.9, (147, 58, 31), 1)
             # cv2.imshow("Demo", frame)
+            cv2.putText(frame, f"% eyes on screen detect {on_screen_dectected_ratio}", (
+                90, 290), cv2.FONT_HERSHEY_DUPLEX, 0.9, (147, 58, 31), 1)
 
             if cv2.waitKey(1) == 27:
                 break
 
         # print(no_eye_times)
         # print(durations)
+        print(off_screen_duration)
+        print(on_screen_dectected_ratio)
         video.release()
         cv2.destroyAllWindows()
-        return durations
+        return durations, duration1

@@ -5,21 +5,20 @@ from .gaze_tracker.example import Eye_duration
 
 
 def showvideo(request):
-    try:
-        lastvideo = Video.objects.last()
-        videofile = lastvideo.videofile
 
-        form = VideoForm(request.POST or None, request.FILES or None)
-        if form.is_valid():
-            form.save()
+    lastvideo = Video.objects.last()
+    videofile = lastvideo.videofile
 
-        path = videofile.path
-        durations = Eye_duration.output(path)
+    form = VideoForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
 
-        context = {'videofile': videofile,
-                   'form': form,
-                   'duration': durations
-                   }
-        return render(request, 'Blog/videos.html', context)
-    except:
-        print("starting")
+    path = videofile.path
+    durations, offscreenduration = Eye_duration.output(path)
+
+    context = {'videofile': videofile,
+               'form': form,
+               'duration': durations,
+               'offscreenduration': offscreenduration
+               }
+    return render(request, 'Blog/videos.html', context)
