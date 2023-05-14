@@ -40,7 +40,7 @@ Cheat Checker is a web-based application that uses computer vision to process th
 - Wesley Johanson \\ https://www.linkedin.com/in/wesleyzero/
 - Aiturgan Talant \\ https://www.linkedin.com/in/aiturgan-talant-8aa003250/
 - Dalia Sebat \\ http://linkedin.com/in/dalia-sebat-878ba1251/
-- 
+- Lucy Ding \\ https://www.linkedin.com/in/lucy-ding-40543918b/
 
 
 ---
