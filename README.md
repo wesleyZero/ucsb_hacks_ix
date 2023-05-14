@@ -4,6 +4,7 @@
 > We believe that the pursuit of knowledge is a valuable and important aspect of education, and it should be carried out with integrity and honesty. Cheating not only undermines the learning process but also diminishes the value of hard work and effort put in by those who strive for academic excellence. We wanted to use new AI capabilities to help the teachers grade work more objectively. 
 
 
+> Our new domain is: ## cheatchecker.tech 🌱
 ### Table of Contents
 
 - [Description](#description)
@@ -13,12 +14,12 @@
 
 ---
 
-## Description
+## Description 👩‍🎓
 
-Cheat Checker is a web-based application that uses computer vision to process the submitted videos from the student during the test-taking. Python model is trained to detect when the student is not looking at the screen and when their gaze is not stable. The less attention they give to their screen, the less percentage they will have. 
+Cheat Checker is a web-based application that uses computer vision to process the submitted videos from the student during the test-taking. Python model is trained to detect when the student is not looking at the screen and when their gaze is not stable. Our machine learning model detects when student is not looking at the screen, absent, and puts out the timestamps for that activities. Teachers can see for themselves the video and check with the provided data to make a fair judgement. 
 
 
-### Technologies
+### Technologies 🚀
 ![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)
 
 
@@ -26,7 +27,7 @@ Cheat Checker is a web-based application that uses computer vision to process th
 
 
 ### How to use
-- After uploading the video to the webpage, the percentage of screen attention will be calculated and returned to you. A low percentage suggests a higher likelihood of cheating by the user.
+- After uploading the video to the webpage, the detection of eye movements will be calculated and returned to you. By looking on the timestemps and checking them out in the player, Professor can make fair judjemnt and decide whether the student was cheating as wel as getting the data about their test taking. 
 
 
 ---
