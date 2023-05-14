@@ -16,5 +16,6 @@ def showvideo(request):
     context = {'videofile': videofile,
                'form': form
                }
-
+    path = videofile.path
+    print(path)
     return render(request, 'Blog/videos.html', context)
