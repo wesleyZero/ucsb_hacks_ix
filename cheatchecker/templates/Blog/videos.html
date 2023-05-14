@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cheat Checker</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+    <ul>
+        <li class="logo">
+            <a class="active" href="#Cheat_Checker">Cheat Checker</a>
+        </li>
+    </ul>
+    <div class="input">
+        <p>Cheat Checker takes a video recording of a person taking an online exam and scans it for evidence of
+            cheating. To use, enter the student's name and select an mp4 file to upload:</p>
+        <form enctype="multipart/form-data" method="POST" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Upload" />
+        </form>
+        <br><br>
+        <video width='400' controls>
+            <source src='{{ MEDIA_URL }}{{ videofile }}' type='video/mp4'>
+            Your browser does not support the video tag.
+        </video>
+        <p> Suspicious flagged moments:</p>
+        {% for key, value in duration.items %}
+        <p>Spent {{value}} seconds off screen at time {{key}}</p>
+        {% endfor %}
+        <br><br>
+        </p>
+    </div>
+</body>
+<script>'undefined' === typeof _trfq || (window._trfq = []); 'undefined' === typeof _trfd && (window._trfd = []), _trfd.push({ 'tccl.baseHost': 'secureserver.net' }, { 'ap': 'cpbh-mt' }, { 'server': 'p3plmcpnl487010' }, { 'dcenter': 'p3' }, { 'cp_id': '8437534' }) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script>
+<script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script>
+
+</html>
