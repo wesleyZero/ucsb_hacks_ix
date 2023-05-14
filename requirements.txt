@@ -1,0 +1,11 @@
+asgiref==3.6.0
+autopep8==2.0.2
+distlib==0.3.6
+Django==4.2.1
+filelock==3.12.0
+platformdirs==3.5.1
+pycodestyle==2.10.0
+sqlparse==0.4.4
+numpy == 1.22.0
+opencv_python == 4.2.0.32
+dlib == 19.16.0

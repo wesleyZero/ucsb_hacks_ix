@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Video
 from .forms import VideoForm
 
+
 def showvideo(request):
 
     lastvideo = Video.objects.last()
@@ -17,5 +18,3 @@ def showvideo(request):
                }
 
     return render(request, 'Blog/videos.html', context)
-
-
