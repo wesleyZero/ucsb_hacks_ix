@@ -20,11 +20,11 @@ Cheat Checker is a web-based application that uses computer vision to process th
 
 ### Technologies
 
-- Python 2 and 3 libraries, Pytorch, Django framework, HTML/CSS, Figma, Canva. 
+- Modified pretrained eye tracking model (Python 2, 3 library), Pytorch, Django framework to connect back-end and front-end, HTML/CSS to write the front-end, Figma and Canva for designing. 
 
 
 ### How to use
-- You will upload the video to the wepage and then it will give back your percantage of screen attention. The lower the percentage the more are the chances that the user is cheating. 
+- After uploading the video to the webpage, the percentage of screen attention will be calculated and returned to you. A low percentage suggests a higher likelihood of cheating by the user.
 
 
 ---
